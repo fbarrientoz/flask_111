@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="page-header">
+       {% for product in products %}
+            <br>
+            {% if product["active"] != 0 %}
+            <h1>Name: {{ product["name"]}</h1>
+        %}
+    </div>
+
+</div>
+
+{% end content %}
