@@ -39,21 +39,3 @@ def about_me():
         }
     return me
 
-@app.route('/users')
-def get_all_users():
-    return str(return_users())
-    
-
-
-def create_user(user):
-    sql """
-        INSERT INTO user(
-                  first_name,
-                  last_name,
-                  hobbies)
-        VALUES(?,?,?)
-        """
-    cursor = get_db()
-    cursor.execute(sql, user)
-    cursor.comit()
-    return True
